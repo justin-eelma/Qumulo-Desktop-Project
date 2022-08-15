@@ -3,7 +3,7 @@
 # Date of latest revision: August 15, 2022
 # Purpose: install VScode and thunderbird using terminal.
 
-#Main
+# Main
 #  VS Code installed using terminal
 sudo snap install --classic code
 
