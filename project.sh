@@ -13,3 +13,5 @@ sudo add-apt-repository ppa:Ubuntu-mozilla-daily/ppa
 
 # To install Thunderbird, use the command
 sudo apt install thunderbird
+
+# end
