@@ -1,0 +1,9 @@
+<#Script: Backup Files#>
+<#Author: Jay Moring & Jon Salhus#>
+<#Date of latest revision: 8/16/2022#>
+<#Purpose: Copies files and produces a backup log#>
+
+$Trigger= New-ScheduledTaskTrigger -Weekly -DaysOfWeek Sunday -At 1am
+$User= "NT AUTHORITY\SYSTEM" 
+$Action= New-ScheduledTaskAction -Execute "PowerShell.exe" -Argument "robocopy.exe C:\Windows 'E:\OS Backup' /s > C:\logOS.txt" 
+Register-ScheduledTask -TaskName "BackupOS" -Trigger $Trigger -User $User -Action $Action -RunLevel Highest -Force
